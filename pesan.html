@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pesan.css">
+    <script src="fontawesome/js/all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<main>
+    <div class="sidebar">
+        <div class="top">
+          <div class="logos"><img src="heal.png" alt=""></div>
+          <div class="concert">
+            <h4>concert tickets</h4>
+          </div>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-ghost"></i>Registration</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user-astronaut"></i></i>Login</a></li>
+                <li><a href="pesan.html"><i class="fa-solid fa-cash-register"></i>Buying</a></li>
+                <li><a href="booked.html"><i class="fa-solid fa-book"></i>Pricelist</a></li>
+            </ul>
+        </div>
+        <section>
+            <div class="wrapper">
+                <div class="title">
+                    <h2>Buy tickets</h2>
+                </div>
+                <form action="">
+                    <div class="field">
+                        <select>
+                            <option selected="selected"  required="required">How Much</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select>
+                            <option selected="selected"  required="required">concert location</option>
+                            <option value="1">Palu</option>
+                            <option value="2">Jakarta Selatan</option>
+                            <option value="3">Bandung</option>
+                            <option value="4">Makassar</option>
+                            <option value="5">Manado</option>
+                            <option value="6">Surabaya</option>
+                            <option value="7">Pontianak</option>
+                            <option value="8">Bangka Belitung</option>
+                            <option value="9">Bali</option>
+                            <option value="10">Aceh</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select>
+                            <option selected="selected"  required="required">Ticket category</option>
+                            <option value="1">CAT 1</option>
+                            <option value="2">CAT 2</option>
+                            <option value="3">CAT 3A</option>
+                            <option value="4">CAT 3B</option>
+                            <option value="5">CAT 4</option>
+                            <option value="6">CAT 5A</option>
+                            <option value="7">CAT 5B</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select>
+                            <option selected="selected"  required="required">Payment method</option>
+                            <option value="1">Transfer bank</option>
+                            <option value="2">e-wallet</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" required="required">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="field">
+                        <button onclick="buy()" class="buy">Buy tickets</button>
+                    </div>
+                    <script>
+                        function buy(){
+                            swal({
+                                title: "success",
+                                text: "Your ticket has been successfully booked",
+                                icon: "success"
+                            });
+                        }
+                    </script>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

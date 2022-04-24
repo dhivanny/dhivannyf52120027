@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booked.css">
+    <script src="fontawesome/js/all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="top">
+                <div class="logos"><img src="heal.png" alt=""></div>
+                <div class="concert">
+                  <h4>concert tickets</h4>
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-ghost"></i>Registration</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user-astronaut"></i></i>Login</a></li>
+                <li><a href="pesan.html"><i class="fa-solid fa-cash-register"></i>Buying</a></li>
+                <li><a href="booked.html"><i class="fa-solid fa-book"></i>Pricelist</a></li>
+            </ul>
+        </div>
+        <section>
+            <div class="wrapper">
+                <div class="title">
+                <h2>Pricelist tickets</h2>
+                </div>
+                <br>
+               <div class="field">
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                      <tr>
+                        <th><span>No</span></th>
+                        <th><span>Category</span></th>
+                        <th><span>Price</span></th>
+                        <th><span>Aksi</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>CAT 1</td>
+                        <td>1.500.000</td>
+                        <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>CAT 2-3</td>
+                        <td>750.000</td>
+                        <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>CAT 4-5</td>
+                        <td>550.000</td>
+                        <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+               </div>
+                       <script>
+                        function showAlert()
+                        {
+                            swal({
+                            title: "Apakah ingin menghapus data?",
+                            text: "Data yang di hapus tidak akan kembali!",
+                            icon: "warning",
+                            buttons: true,
+                            dangerMode: true,
+                            })
+                            .then((willDelete) => {
+                            if (willDelete) {
+                                swal("Data berhasil dihapus!", {
+                                icon: "success",
+                                });
+                            } else {
+                                swal("Data tidak dihapus!");
+                            }
+                            });
+                        }
+                        function Alert()
+                        {
+                            swal(
+                        
+                            "Apakah anda ingin mengedit data?",
+                            {
+                            icon: "warning",
+                            buttons: {
+                                cancel: "Tidak",
+                              catch: {
+                                text: "Ya",
+                                },
+                                
+                            },
+                            })
+                            .then((value) => {
+                            switch (value) {
+                                case "catch":
+                                swal("Berhasil!", "Data berhasil diedit!", "success");
+                                break;
+                            
+                                default:
+                                swal("Data gagal diedit!");
+                            }
+                            });
+                        }
+                        </script>
+
+                   
+
+                
+               
+                
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

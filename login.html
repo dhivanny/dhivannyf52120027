@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="fontawesome/js/all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<main>
+    <div class="sidebar">
+        <div class="top">
+          <div class="logos"><img src="heal.png" alt=""></div>
+          <div class="concert">
+            <h4>concert tickets</h4>
+          </div>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-ghost"></i>Registration</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user-astronaut"></i></i>Login</a></li>
+                <li><a href="pesan.html"><i class="fa-solid fa-cash-register"></i>Buying</a></li>
+                <li><a href="booked.html"><i class="fa-solid fa-book"></i>Pricelist</a></li>
+            </ul>
+        </div>
+        <section>
+            <div class="wrapper">
+                <div class="title">
+                    <h2>Login</h2>
+                </div>
+                <form action="">
+                    <div class="field">
+                        <input type="text" name="psername" required="required">
+                        <label for="">Username</label>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" required="required">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="field">
+                        <input type="submit" name="Register account" id="" onclick="login()" value="Login Account">
+                    </div>
+                    <script>
+                        function login(){
+                            swal({
+                                title: "success",
+                                text: "your account is successful",
+                                icon: "success",
+                            });
+                        }
+                    </script>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>
